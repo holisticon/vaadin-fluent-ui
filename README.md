@@ -20,6 +20,20 @@ add this addon to your projects pom.xml
 </repository>
 ```
 
+### Rules for fluent API
+
+First: these are not Builders. The Builder pattern assumes that calling "build()" creates a new instance every time. 
+The Fluent-helpers do not create new instances, they just wrap a concrete final component and allow fluent access to 
+its setters.
+
+#### How it is done
+
+- a fluent wrapper is created for every Vaadin Component
+- every constructor of Component "Bar" can be accessed via static method FluentBar.bar(....)
+- every "setFoo()" method can be accessed via "foo()" (no "with...")
+- every "addFoo(Foo foo)" method can be accessed via vararg "addFoo(Foo... foos)", so many items can be added at once
+- methods concerning lifecycle and composition (setParent, setCompositionRoot) must not be exposed.
+- boolean setters (setEnabled()) become enabled(boolean) but might be flanked by enable() and disable() when applicable.
 
 
 

@@ -1,5 +1,4 @@
-vaadin-fluent-ui
-================
+# Fluent UI API for Vaadin 7+
 
 vaadin addon to support fluent creation of UI components. 
 
@@ -20,13 +19,13 @@ add this addon to your projects pom.xml
 </repository>
 ```
 
-### Rules for fluent API
+## Rules for fluent API
 
 First: these are not Builders. The Builder pattern assumes that calling "build()" creates a new instance every time. 
 The Fluent-helpers do not create new instances, they just wrap a concrete final component and allow fluent access to 
 its setters.
 
-#### How it is done
+### How it is done
 
 - a fluent wrapper is created for every Vaadin Component
 - every constructor of Component "Bar" can be accessed via static method FluentBar.bar(....)
@@ -38,6 +37,6 @@ its setters.
 
 
 
-### Vaadin Addon rules
+## Vaadin Addon rules
 
 This project follows the rules and guidelines described here: https://vaadin.com/directory/help/creating-vaadin-add-ons

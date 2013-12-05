@@ -5,9 +5,9 @@ vaadin addon to support fluent creation of UI components.
 
 See this addon in the vaadin directory: https://vaadin.com/directory#addon/fluent-ui:vaadin
 
-add this addon to your project
+add this addon to your projects pom.xml
 
-´´´
+```xml
 <dependency>
    <groupId>org.vaadin.addons</groupId>
    <artifactId>fluent-ui</artifactId>
@@ -18,12 +18,12 @@ add this addon to your project
    <id>vaadin-addons</id>
    <url>http://maven.vaadin.com/vaadin-addons</url>
 </repository>
-´´´
+```
 
 
 
 
 
-## Vaadin Addon rules
+### Vaadin Addon rules
 
 This project follows the rules and guidelines described here: https://vaadin.com/directory/help/creating-vaadin-add-ons
